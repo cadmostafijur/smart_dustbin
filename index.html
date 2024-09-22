@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smart Dustbin Control</title>
+</head>
+<body>
+    <h1>Control Your Smart Dustbin Robot</h1>
+    <button onclick="getLocation()">Get My Location</button>
+    <div id="location"></div>
+    <button id="moveButton" style="display:none;" onclick="sendCommand()">Move to My Location</button>
+    <button onclick="moveToFixedLocation()">Move to Fixed Disposal Location</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
