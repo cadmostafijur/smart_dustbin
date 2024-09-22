@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Smart Dustbin Control</title>
 </head>
 <body>
-    <h1>Control Your Smart Dustbin Robot</h1>
-    <button onclick="getLocation()">Get My Location</button>
-    <div id="location"></div>
-    <button id="moveButton" style="display:none;" onclick="sendCommand()">Move to My Location</button>
-    <button onclick="moveToFixedLocation()">Move to Fixed Disposal Location</button>
+    <div class="container">
+        <h1>Control Your Smart Dustbin Robot</h1>
+        <button class="btn" onclick="getLocation()">Get My Location</button>
+        <div id="location" class="location"></div>
+        <button id="moveButton" class="btn" style="display:none;" onclick="sendCommand()">Move to My Location</button>
+        <button class="btn" onclick="moveToFixedLocation()">Move to Fixed Disposal Location</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
