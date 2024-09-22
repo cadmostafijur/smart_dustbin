@@ -32,9 +32,7 @@ function sendCommand() {
     })
     .catch((error) => console.error('Error:', error));
 }
-
 function moveToFixedLocation() {
-    // Send a command to move to the fixed disposal location
     fetch('http://your-robot-ip/move', {
         method: 'POST',
         headers: {
@@ -46,10 +44,13 @@ function moveToFixedLocation() {
     .then(data => {
         console.log(data); // Log the response for debugging
         if (data.status === "Success") {
-            alert("Successfully moved garbage to the fixed disposal location!");
+            swal("Success!", "Successfully moved garbage to the fixed disposal location!", "success");
         } else {
-            alert("Failed to move garbage.");
+            swal("Error!", "Failed to move garbage.", "error");
         }
     })
-    .catch((error) => console.error('Error:', error));
+    .catch((error) => {
+        console.error('Error:', error);
+        swal("Error!", "An error occurred while communicating with the robot.", "error");
+    });
 }
