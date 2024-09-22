@@ -1,32 +1,58 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-image: url('https://w7.pngwing.com/pngs/710/66/png-transparent-waste-container-tin-can-cartoon-illustration-garbage-robot-electronics-photography-recycling.png');
+    background-size: cover; /* Default cover for larger screens */
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 20px;
+    color: white; /* Change text color for better contrast */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better readability */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    /* Optional: Set a specific width and height */
+    width: 90%; /* Adjust as needed */
+    height: auto; /* Let height adjust based on content */
 }
 
 h1 {
-    color: #333;
+    color: #fff; /* White text for heading */
 }
 
-button {
+.btn {
     background-color: #28a745;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 20px;
     cursor: pointer;
     border-radius: 5px;
     margin: 10px 0;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
 }
 
-button:hover {
+.btn:hover {
     background-color: #218838;
 }
 
-#location {
-    margin-top: 10px;
+.location {
+    margin-top: 20px;
     padding: 10px;
-    background-color: #e2e3e5;
+    background-color: #8eabe4;
     border: 1px solid #ced4da;
     border-radius: 5px;
+}
+
+/* Media query for mobile view */
+@media (max-width: 600px) {
+    body {
+        background-size: contain; /* Change to contain for smaller screens */
+    }
 }
